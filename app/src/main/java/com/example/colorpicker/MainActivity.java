@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     SeekBar blueBar;
     TextView rgb;
     TextView showColor;
+    TextView redNumber;
+    TextView greenNumber;
+    TextView blueNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
         blueBar = (SeekBar) findViewById(R.id.BlueBar);
         rgb = (TextView) findViewById(R.id.Rgb);
         showColor = (TextView) findViewById(R.id.ShowColor);
+        redNumber = (TextView) findViewById(R.id.RedNumber);
+        greenNumber = (TextView) findViewById(R.id.GreenNumber);
+        blueNumber = (TextView) findViewById(R.id.BlueNumber);
 
+        //NightMode ellenőrzése szövegszín miatt
         int nightMode = getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (nightMode) {
             case  Configuration.UI_MODE_NIGHT_YES:
@@ -41,11 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+        //Sliderek
         redBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 red = progress;
                 showColor.setBackgroundColor(Color.rgb(red, green, blue));
+                redNumber.setText(String.valueOf(red));
                 rgb.setText("("+red+","+green+","+blue+")");
             }
 
@@ -65,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 green = progress;
                 showColor.setBackgroundColor(Color.rgb(red, green, blue));
+                greenNumber.setText(String.valueOf(green));
                 rgb.setText("("+red+","+green+","+blue+")");
             }
 
@@ -84,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 blue = progress;
                 showColor.setBackgroundColor(Color.rgb(red, green, blue));
+                blueNumber.setText(String.valueOf(blue));
                 rgb.setText("("+red+","+green+","+blue+")");
             }
 

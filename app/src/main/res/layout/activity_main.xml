@@ -81,5 +81,38 @@
         android:layout_marginTop="10dp"
         android:background="@color/black"/>
 
+    <TextView
+        android:id="@+id/RedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#ff3b05"
+        android:layout_toRightOf="@id/RedBar"
+        android:layout_below="@id/Red"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/GreenNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#056e00"
+        android:layout_toRightOf="@id/GreenBar"
+        android:layout_below="@id/Green"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/BlueNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#002aff"
+        android:layout_toRightOf="@id/BlueBar"
+        android:layout_below="@id/Blue"
+        android:textSize="20sp"
+        />
+
 
 </RelativeLayout>
