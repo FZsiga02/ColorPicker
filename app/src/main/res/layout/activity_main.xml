@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:textColor="#ff3b05"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
+
+    <SeekBar
+        android:id="@+id/RedBar"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Red"
+        android:layout_centerHorizontal="true"
+        android:max="255" />
+
+    <TextView
+        android:id="@+id/Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green"
+        android:textColor="#056e00"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/RedBar"/>
+
+    <SeekBar
+        android:id="@+id/GreenBar"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Green"
+        android:layout_centerHorizontal="true"
+        android:max="255" />
+
+    <TextView
+        android:id="@+id/Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue"
+        android:textColor="#002aff"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/GreenBar"/>
+
+    <SeekBar
+        android:id="@+id/BlueBar"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Blue"
+        android:max="255"
+        />
+
+    <TextView
+        android:id="@+id/Rgb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(0,0,0)"
+        android:textColor="#080808"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:layout_centerVertical="true"
+        android:paddingBottom="100dp"
+        />
+
+    <TextView
+        android:id="@+id/ShowColor"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/Rgb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"/>
+
+
+</RelativeLayout>
